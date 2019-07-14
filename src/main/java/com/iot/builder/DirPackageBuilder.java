@@ -1,11 +1,15 @@
-package com.iot.builder;
+﻿package com.iot.builder;
 
 import java.nio.ByteBuffer;
 
 import com.iot.util.Timer;
 import com.iot.util.byteConvert;
 
-
+/*
+         目录包的封装
+           20190715 1:37
+          author :cxl1ove
+*/
 
 public class DirPackageBuilder {
 			public static byte[] packDirRequest(int nUseID,int nHighLevel,int nLowLevel,int nNetID,int nSubNetID,int nNodeID,int nSensorID){
