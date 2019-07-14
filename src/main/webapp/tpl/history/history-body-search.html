@@ -1,0 +1,55 @@
+<div class="modal fade" id="SearchModal" tabindex="-1" role="dialog" aria-labelledby="SearchModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content" ng-controller="searchCtrl">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+				<h4 class="modal-title" id="cmdModalLabel">
+					查询选择
+				</h4>
+			</div>
+			<div class="modal-body" style="height: 450px;">
+				<div class="row-fluid">
+					<form class="form-horizontal" id="searchForm" name="searchForm">
+						<div class="control-group"  ng-hide="searchType.showNET">
+							<label class="control-label" for="form-select-1"><i class="fa fa-exclamation-triangle" style="color: red"></i>&nbsp;查询网络号</label>
+							<div class="controls">
+								<select name="NTID" class="chzn-select" id="form-select-1" data-placeholder="请选择网络号..." search="" ng-model="searchData.NTID">
+									<option value=''></option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group" ng-hide="searchType.showSUBNET">
+							<label class="control-label" for="form-select-2"><i class="fa fa-exclamation-triangle" style="color: red"></i>&nbsp;查询子网号</label>
+							<div class="controls">
+								<select name="SBNTID" class="chzn-select" id="form-select-2" data-placeholder="请选择子网号..." search="" ng-model="searchData.SBNTID">
+									<option value=''></option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group" ng-hide="searchType.showNODE">
+							<label class="control-label" for="form-select-3">查询节点号</label>
+							<div class="controls">
+								<select name="NODEID" class="chzn-select" id="form-select-3" data-placeholder="请选择节点..." search="" ng-model="searchData.NODEID">
+									<option value=''></option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group" ng-hide="searchType.showTime">
+							<label class="control-label" for="form-select-4"><i class="fa fa-exclamation-triangle" style="color: red"></i>&nbsp;查询时间</label>
+							<div class="controls">
+								<div class="input-prepend">
+									<span class="add-on"><i class="fa fa-calendar"></i></span>
+									<input type="text" name="time" id="form-select-4" search="">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="searchRequest()">提交更改</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>

@@ -1,0 +1,12 @@
+/**
+ * 树型菜单栏的打开与关闭动画效果
+ */
+#sidebar {
+	transition:all 0.5s;
+}
+#sidebar:before {
+	transition:all 0.5s;
+}
+#main-content {
+	transition:margin-left 0.5s;
+}

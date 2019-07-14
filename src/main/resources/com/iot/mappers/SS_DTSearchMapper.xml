@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iot.dao.SS_DTSearchDao">
+
+   <!--  <resultMap type="SS_DT" id="SS_DTResult">
+		<result property="IN_ID" column="IN_ID"/>
+		<result property="NTID" column="NTID"/>
+		<result property="SBNTID" column="SBNTID"/>
+		<result property="NDPHDR" column="NDPHDR"/>
+		<result property="SNSR_INRID" column="SNSR_INRID"/>
+		<result property="DTITMID" column="DTITMID"/>
+		<result property="MSGID" column="MSGID"/>
+		<result property="MSGVL" column="MSGVL"/>
+		<result property="DTM" column="DTM"/>
+	</resultMap> -->
+	<resultMap type="HistorySS_DT" id="SS_DTResult">
+		<result property="NTID" column="NTID"/>
+		<result property="SBNTID" column="SBNTID"/>
+		<result property="DTDSCRPT" column="DTDSCRPT"/>
+		<result property="DTNM" column="DTNM"/>
+		<result property="MSGVL" column="MSGVL"/>
+		<result property="DTM" column="DTM"/>
+    </resultMap>
+	
+	
+	<!-- <select id="findMSGVL" parameterType="SS_DT" resultMap="SS_DTResult">
+	   select * from SS_DT 
+	   <where>
+		    <if test="NTID!=null and NTID!='' ">
+				and NTID = #{NTID}
+			</if>
+			<if test="SBNTID!=null and SBNTID!='' ">
+				and SBNTID=#{SBNTID}
+			</if>
+			<if test="NDPHDR!=null and NDPHDR!='' ">
+				and NDPHDR=#{NDPHDR}
+			</if>
+		</where>
+	</select> -->
+	
+	<select id="findHistoryData" parameterType="Map" resultMap="SS_DTResult">
+       select dbo.SS_DT.NTID,dbo.SS_DT.SBNTID,dbo.PRTL_BSDT.DTDSCRPT,dbo.PRTL_BSDT.DTNM,dbo.SS_DT.MSGVL,dbo.SS_DT.DTM from dbo.SS_DT,dbo.PRTL_BSDT  
+       <where>
+           dbo.SS_DT.DTITMID = dbo.PRTL_BSDT.DTITMID  
+       <if test="NTID!=null and NTID!='' ">
+				and dbo.SS_DT.NTID = #{NTID}
+			</if>
+			<if test="SBNTID!=null and SBNTID!='' ">
+				and dbo.SS_DT.SBNTID=#{SBNTID}
+			</if>
+			<if test="NDPHDR!=null and NDPHDR!='' ">
+				and dbo.SS_DT.NDPHDR=#{NDPHDR}
+			</if>
+		    <if test="sTime!=null and sTime!='' ">
+				and dbo.SS_DT.DTM &gt;= #{sTime}
+			</if>
+			<if test="eTime!=null and eTime!='' ">
+				and dbo.SS_DT.DTM &lt;= #{eTime}
+			</if>
+		</where>
+	</select>
+	
+</mapper> 

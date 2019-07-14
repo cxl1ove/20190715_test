@@ -1,0 +1,75 @@
+<div id="main-content" class="clearfix" ng-controller="mainCtrl">
+	<div id="breadcrumbs">
+		<ul class="breadcrumb">
+			<li><i class="fa fa-home"></i><a href=""> 主页 <small><i class="fa fa-angle-double-right"></i> 详细信息 &amp; 数据图表显示</small></a></li>
+		</ul>	
+	</div><!--.breadcrumb-->
+	<div id="page-content" class="clearfix">	
+		<div class="row-fluid">
+			<div class="row-fluid">
+				<div class="span7">
+					<div class="widget-box">
+						<div class="widget-header">
+							<h5 class="smaller">区域详细信息</h5>
+							<div class="widget-toolbar no-border">
+								 <ul class="nav nav-tabs" id="myTab">
+									<li class="active"><a data-toggle="tab" href="#tab-home"><i class="green fa fa-home bigger-110"></i> 监控区域</a></li>
+									<li class=""><a data-toggle="tab" href="#tab-info"><i class="green fa fa-info-circle bigger-110"></i> 区域信息</a></li>
+						        </ul>
+							</div>
+						</div>
+						<div class="widget-body">
+						<div class="widget-body-inner" style="display: block;">
+							<div class="widget-main">
+								<div class="tab-content" id="tabContent">
+									<div id="tab-home" class="tab-pane active" add-map="node-info">
+										<p>地图加载...</p>
+									</div>
+									<div id="tab-info" class="tab-pane">
+										<div class="row-fluid">
+											<div class="span12">
+												<div id="line-info" ui-line="">折线图</div>
+											</div>
+											<div class="span12" style="margin-left: 0px;">
+												<div id="pan-info-1" class="span2" ui-pan="#8BBC67">温度</div>
+												<div id="pan-info-2" class="span2" ui-pan="#D36E6E">PH值</div>
+												<div id="pan-info-3" class="span2" ui-pan="#AC68BA">浊度</div>
+												<div id="pan-info-4" class="span2" ui-pan="#EFAD62">溶解氧</div>
+												<div id="pan-info-5" class="span2" ui-pan="#666666">电导率</div>
+											</div>
+										</div>
+									</div>
+						        </div>
+			 				</div>
+			 				</div>
+						</div>
+					</div>
+				</div>
+				<div class="span5">
+					<div class="widget-box">
+						<div class="widget-header">
+							<h5>区域状态</h5>
+							<div class="widget-toolbar">
+								<a href="#" data-action="reload"><i class="fa fa-refresh"></i></a>
+								<a href="#" data-action="collapse"><i class="fa fa-chevron-up"></i></a>
+								<a href="#" data-action="close"><i class="fa fa-remove"></i></a>
+							</div>
+						</div>
+						
+						<div class="widget-body">
+							<div class="widget-body-inner" style="display: block;">
+								<div class="widget-main">
+									<div id="tab-home-1" class="tab-pane active" add-map="area-info">
+										<p>地图加载...</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="vspace-6"></div>
+			</div>
+		</div><!-- ./row -->
+	</div>
+	<div id="ace-settings-container"></div>
+</div>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iot.dao.NodePHDRSearchDao">
+     <resultMap type="Node" id="NodeResult">
+		<result property="NODEINRID" column="NODEINRID"/>
+		<result property="NODEID" column="NODEID"/>
+		<result property="NDPHDR" column="NDPHDR"/>
+		<result property="NTID" column="NTID"/>
+		<result property="SBNTID" column="SBNTID"/>
+		<result property="LCTN_X" column="LCTN_X"/>
+		<result property="LCTN_Y" column="LCTN_Y"/>
+		<result property="NDTP" column="NDTP"/>
+		<result property="NDDSPT" column="NDDSPT"/>
+		<result property="TRSMTPWR" column="TRSMTPWR"/>
+		<result property="PRDCR" column="PRDCR"/>
+		<result property="VSN" column="VSN"/>
+		<result property="MEMO" column="MEMO"/>
+		<result property="SNSRS" column="SNSRS"/>
+	</resultMap>
+	<select id="findNDPHDR" parameterType="Map" resultType="Node">
+	    select * from dbo.NOTE_INFO where NODEID=#{NODEID} and NTID = #{NTID} and SBNTID=#{SBNTID}
+	</select>
+	
+	
+</mapper> 

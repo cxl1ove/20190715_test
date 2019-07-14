@@ -1,0 +1,34 @@
+{
+	"columnDefs": [
+		{ "title": "ID", "targets": 0 }, { "name": "id", "targets": 0 },
+		{ "title": "管理者", "targets": 1 }, { "name": "manager", "targets": 1 },
+		{ "title": "密码", "targets": 2 }, { "name": "pass", "targets": 2 },
+		{ "title": "创建时间", "targets": 3 }, { "name": "createTime", "targets": 3 }
+	],
+	"columns": [
+			   { "data": "id" },
+			   { "data": "manager" },
+			   { "data": "pass" },
+			   { "data": "createTime" }
+	],
+	"datas": [
+		{
+			"id":1,
+			"manager":"huyssen",
+			"pass":"456789",
+			"createTime":"2016-11-30"
+		},
+		{
+			"id":2,
+			"manager":"admin",
+			"pass":"123456",
+			"createTime":"2016-11-30"
+		},
+		{
+			"id":3,
+			"manager":"nchu",
+			"pass":"123456789",
+			"createTime":"2016-11-30"
+		}
+	] 
+}

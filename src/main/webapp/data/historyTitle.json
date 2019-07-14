@@ -1,0 +1,18 @@
+{
+	"columnDefs": [
+		{ "title": "网络号", "targets": 0 }, { "name": "NTID", "targets": 0 },
+		{ "title": "子网号", "targets": 1 }, { "name": "SBNTID", "targets": 1 },
+		{ "title": "节点名", "targets": 2 }, { "name": "DTDSCRPT", "targets": 2 },
+		{ "title": "参数类型", "targets": 3 }, { "name": "DTNM", "targets": 3 },
+		{ "title": "参数值", "targets": 4 }, { "name": "MSGVL", "targets": 4 },
+		{ "title": "时间", "targets": 5 }, { "name": "DTM", "targets": 5 },{ "orderSequence": ["desc"], "targets": 5}
+	],
+	"columns": [
+	   { "data": "NTID" },
+	   { "data": "SBNTID" },
+	   { "data": "DTDSCRPT" },
+	   { "data": "DTNM" },
+	   { "data": "MSGVL" },
+	   { "data": "DTM" }
+	]
+}
